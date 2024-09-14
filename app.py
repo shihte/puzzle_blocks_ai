@@ -168,34 +168,36 @@ def init():
     #endregion
 
     #region 將所有積木放入 blocks 列表
-    blocks = [
-        block_99,
-        block_44,
-        block_11,
-        block_I5,
-        block_I4,
-        block_I3,
-        block_I2,
-        block_L,
-        block_l,
-        block_Big_L,
-        block_Big_l,
-        block_Big_L2,
-        block_Big_l2,
-        block_Mini_L,
-        block_Mini_l,
-        block_Mini_L2,
-        block_Mini_l2,
-        block_T,
-        block_t,
-        block_T2,
-        block_t2,
-        block_H2,
-        block_H3,
-        block_H4,
-        block_H5,
-    ]
+    #region 將所有積木放入 blocks 字典
+    blocks = {
+        "block_99": block_99,
+        "block_44": block_44,
+        "block_11": block_11,
+        "block_I5": block_I5,
+        "block_I4": block_I4,
+        "block_I3": block_I3,
+        "block_I2": block_I2,
+        "block_L": block_L,
+        "block_l": block_l,
+        "block_Big_L": block_Big_L,
+        "block_Big_l": block_Big_l,
+        "block_Big_L2": block_Big_L2,
+        "block_Big_l2": block_Big_l2,
+        "block_Mini_L": block_Mini_L,
+        "block_Mini_l": block_Mini_l,
+        "block_Mini_L2": block_Mini_L2,
+        "block_Mini_l2": block_Mini_l2,
+        "block_T": block_T,
+        "block_t": block_t,
+        "block_T2": block_T2,
+        "block_t2": block_t2,
+        "block_H2": block_H2,
+        "block_H3": block_H3,
+        "block_H4": block_H4,
+        "block_H5": block_H5,
+    }
     #endregion
+
 #endregion
 
 #region 自定義棋盤函式
@@ -224,7 +226,14 @@ def set_pan():
 
 #region 判斷積木放置位置以及分數
 def can_place (blocks,pan) :
+
     pan_cope = pan
+    
+    try_block_name = "block_I5"
+    block = blocks[try_block_name] #TODO 暫時將取用積木定義，稍後改成用inuput
+    if try_block_name not in blocks :
+        print("該積木不存在")
+    
     
 
 # 初始化設定
